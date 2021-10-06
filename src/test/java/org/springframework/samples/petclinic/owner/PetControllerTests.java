@@ -86,8 +86,7 @@ class PetControllerTests {
 		mockMvc.perform(get("/owners/{ownerId}/pets/{petId}/edit", TEST_OWNER_ID, TEST_PET_ID))
 				.andExpect(status().isOk()).andExpect(model().attributeExists("pet"))
 				.andExpect(view().name("pets/createOrUpdatePetForm"));
-	} 
-	
+	}
 
 	@Test
 	void testProcessUpdateFormHasErrors() throws Exception {
